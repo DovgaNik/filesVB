@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Public Class Form1
+
+
     Private Sub WriteToFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WriteToFileToolStripMenuItem.Click
 
         If File.Exists("MyFile.txt") Then
@@ -25,6 +27,22 @@ Public Class Form1
             TextBox1.Text = File.ReadAllText("MyFile.txt")
         Else
             MessageBox.Show("File doesn't exist")
+        End If
+    End Sub
+
+    Private Sub WriteByLineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WriteByLineToolStripMenuItem.Click
+        Dim text As String
+        text = TextBox1.Text
+        Dim words As String()
+        words = text.Split((" ,.?/\|][{}<>!@#$%^&*()" + vbNewLine).ToCharArray, StringSplitOptions.RemoveEmptyEntries)
+        File.WriteAllLines("MyFile.txt", words)
+    End Sub
+
+    Private Sub ByLineToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ByLineToolStripMenuItem.Click
+        If File.Exists("MyFile.txt") Then
+            Dim words As String()
+            words = File.ReadAllLines("MyFile.txt")
+            TextBox1.Lines = words
         End If
     End Sub
 End Class

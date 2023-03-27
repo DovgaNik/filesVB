@@ -27,8 +27,10 @@ Partial Class Form1
         Me.WriteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WriteToFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AppendTextToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WriteByLineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReadTheFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ByLineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,7 +54,7 @@ Partial Class Form1
         '
         'WriteToolStripMenuItem
         '
-        Me.WriteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WriteToFileToolStripMenuItem, Me.AppendTextToolStripMenuItem})
+        Me.WriteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WriteToFileToolStripMenuItem, Me.AppendTextToolStripMenuItem, Me.WriteByLineToolStripMenuItem})
         Me.WriteToolStripMenuItem.Name = "WriteToolStripMenuItem"
         Me.WriteToolStripMenuItem.Size = New System.Drawing.Size(59, 24)
         Me.WriteToolStripMenuItem.Text = "Write"
@@ -60,18 +62,24 @@ Partial Class Form1
         'WriteToFileToolStripMenuItem
         '
         Me.WriteToFileToolStripMenuItem.Name = "WriteToFileToolStripMenuItem"
-        Me.WriteToFileToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.WriteToFileToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.WriteToFileToolStripMenuItem.Text = "Write to file"
         '
         'AppendTextToolStripMenuItem
         '
         Me.AppendTextToolStripMenuItem.Name = "AppendTextToolStripMenuItem"
-        Me.AppendTextToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AppendTextToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
         Me.AppendTextToolStripMenuItem.Text = "Append text"
+        '
+        'WriteByLineToolStripMenuItem
+        '
+        Me.WriteByLineToolStripMenuItem.Name = "WriteByLineToolStripMenuItem"
+        Me.WriteByLineToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
+        Me.WriteByLineToolStripMenuItem.Text = "Write by line"
         '
         'ReadToolStripMenuItem
         '
-        Me.ReadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadTheFileToolStripMenuItem})
+        Me.ReadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadTheFileToolStripMenuItem, Me.ByLineToolStripMenuItem})
         Me.ReadToolStripMenuItem.Name = "ReadToolStripMenuItem"
         Me.ReadToolStripMenuItem.Size = New System.Drawing.Size(57, 24)
         Me.ReadToolStripMenuItem.Text = "Read"
@@ -81,6 +89,12 @@ Partial Class Form1
         Me.ReadTheFileToolStripMenuItem.Name = "ReadTheFileToolStripMenuItem"
         Me.ReadTheFileToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ReadTheFileToolStripMenuItem.Text = "Read the file"
+        '
+        'ByLineToolStripMenuItem
+        '
+        Me.ByLineToolStripMenuItem.Name = "ByLineToolStripMenuItem"
+        Me.ByLineToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ByLineToolStripMenuItem.Text = "By line"
         '
         'Form1
         '
@@ -106,4 +120,6 @@ Partial Class Form1
     Friend WithEvents AppendTextToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReadTheFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WriteByLineToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ByLineToolStripMenuItem As ToolStripMenuItem
 End Class
