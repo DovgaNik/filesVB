@@ -47,18 +47,18 @@ Public Class Form1
     End Sub
 
     Private Sub SaveByFilenameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveByFilenameToolStripMenuItem.Click
+
         'Create an instance of SaveFileDialog
         Dim svDg As New SaveFileDialog
 
         'Set propertites
-
         svDg.Filter = "text files|*.txt|documents|*.doc;*.docx;*.pdf|all files|*.*"
         svDg.FilterIndex = 1
         svDg.DefaultExt = ".txt"
         svDg.AddExtension = True
         svDg.InitialDirectory = "D:\"
-        'Open the dialog, if the user chose save
 
+        'Open the dialog, if the user chose save
         If svDg.ShowDialog() = DialogResult.OK Then
 
             Dim saveFile = svDg.FileName
@@ -66,5 +66,19 @@ Public Class Form1
 
         End If
 
+    End Sub
+
+    Private Sub OpenFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenFileToolStripMenuItem.Click
+        Dim opDg As New OpenFileDialog
+
+        opDg.Filter = "text files|*.txt|documents|*.doc;*.docx;*.pdf|all files|*.*"
+        opDg.FilterIndex = 1
+        opDg.DefaultExt = ".txt"
+        opDg.AddExtension = True
+        opDg.InitialDirectory = "D:\"
+
+        If opDg.ShowDialog() = DialogResult.OK Then
+            TextBox1.Text = File.ReadAllText(opDg.FileName)
+        End If
     End Sub
 End Class

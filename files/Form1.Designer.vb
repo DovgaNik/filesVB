@@ -33,6 +33,7 @@ Partial Class Form1
         Me.ByLineToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveByFilenameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -81,7 +82,7 @@ Partial Class Form1
         '
         'ReadToolStripMenuItem
         '
-        Me.ReadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadTheFileToolStripMenuItem, Me.ByLineToolStripMenuItem})
+        Me.ReadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadTheFileToolStripMenuItem, Me.ByLineToolStripMenuItem, Me.OpenFileToolStripMenuItem})
         Me.ReadToolStripMenuItem.Name = "ReadToolStripMenuItem"
         Me.ReadToolStripMenuItem.Size = New System.Drawing.Size(57, 24)
         Me.ReadToolStripMenuItem.Text = "Read"
@@ -89,13 +90,13 @@ Partial Class Form1
         'ReadTheFileToolStripMenuItem
         '
         Me.ReadTheFileToolStripMenuItem.Name = "ReadTheFileToolStripMenuItem"
-        Me.ReadTheFileToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
+        Me.ReadTheFileToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ReadTheFileToolStripMenuItem.Text = "Read the file"
         '
         'ByLineToolStripMenuItem
         '
         Me.ByLineToolStripMenuItem.Name = "ByLineToolStripMenuItem"
-        Me.ByLineToolStripMenuItem.Size = New System.Drawing.Size(176, 26)
+        Me.ByLineToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ByLineToolStripMenuItem.Text = "By line"
         '
         'SaveFileToolStripMenuItem
@@ -108,8 +109,14 @@ Partial Class Form1
         'SaveByFilenameToolStripMenuItem
         '
         Me.SaveByFilenameToolStripMenuItem.Name = "SaveByFilenameToolStripMenuItem"
-        Me.SaveByFilenameToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SaveByFilenameToolStripMenuItem.Size = New System.Drawing.Size(205, 26)
         Me.SaveByFilenameToolStripMenuItem.Text = "Save by filename"
+        '
+        'OpenFileToolStripMenuItem
+        '
+        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.OpenFileToolStripMenuItem.Text = "Open file"
         '
         'Form1
         '
@@ -139,4 +146,5 @@ Partial Class Form1
     Friend WithEvents ByLineToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveByFilenameToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFileToolStripMenuItem As ToolStripMenuItem
 End Class
