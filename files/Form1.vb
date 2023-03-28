@@ -45,4 +45,26 @@ Public Class Form1
             TextBox1.Lines = words
         End If
     End Sub
+
+    Private Sub SaveByFilenameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveByFilenameToolStripMenuItem.Click
+        'Create an instance of SaveFileDialog
+        Dim svDg As New SaveFileDialog
+
+        'Set propertites
+
+        svDg.Filter = "text files|*.txt|documents|*.doc;*.docx;*.pdf|all files|*.*"
+        svDg.FilterIndex = 1
+        svDg.DefaultExt = ".txt"
+        svDg.AddExtension = True
+        svDg.InitialDirectory = "D:\"
+        'Open the dialog, if the user chose save
+
+        If svDg.ShowDialog() = DialogResult.OK Then
+
+            Dim saveFile = svDg.FileName
+            File.WriteAllLines(saveFile, TextBox1.Lines)
+
+        End If
+
+    End Sub
 End Class
